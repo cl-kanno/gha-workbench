@@ -26,8 +26,8 @@ jobs:
         run: |
           while true
           do
-            result=echo "hoge"
-            echo $result
+            result="hoge"
+            echo "$result"
             if [ "$result" = "hoge" ] # 終了条件
             then
               break
@@ -40,8 +40,8 @@ jobs:
         run: |
           while true
           do
-            result=echo $((RANDOM % 100)) # 0 - 99で乱数取得
-            echo $result
+            result=$((RANDOM % 100)) # 0 - 99で乱数取得
+            echo "$result"
             if [ $result -ge 80 ] # 80以上で終了
             then
               break
@@ -54,8 +54,8 @@ jobs:
         run: |
           while true
           do
-            result=echo $((RANDOM % 100)) # 0 - 99で乱数取得
-            echo $result
+            result=$((RANDOM % 100)) # 0 - 99で乱数取得
+            echo "$result"
             if [ $result -ge 9999 ] # 9999以上で終了(達成不可)
             then
               break
